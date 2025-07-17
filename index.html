@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
+<!-- 
+  SPA (Single Page Application) 
+  O conteúdo é inserido via JS através do React.
+
+  O HTML é carregado uma vez e o React manipula o DOM.
+  O arquivo index.html é o ponto de entrada da aplicação.
+  O Vite serve o arquivo index.html e injeta o script do React.
+  O React renderiza o conteúdo dentro do elemento com id "root".
+  O Vite cuida do hot module replacement (HMR) durante o desenvolvimento.
+  O arquivo main.jsx é o ponto de entrada do React, onde o componente principal é renderizado.
+
+  Vantagens:
+  - Mais rápido
+  - Nivel de interatividade maior
+  - Melhor experiência do usuário
+  - Menos requisições HTTP
+-->
