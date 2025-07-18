@@ -1,4 +1,4 @@
-import { ChevronRightIcon, TrashIcon } from "lucide-react"; // fonte: https://lucide.dev/guide/packages/lucide-react
+import { CheckIcon, ChevronRightIcon, TrashIcon } from "lucide-react"; // fonte: https://lucide.dev/guide/packages/lucide-react
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
@@ -31,7 +31,8 @@ function Tasks(props) {
                     className="gap-2 flex">
                     <button
                         onClick={() => props.onTaskClick(task.id)} // ao clicar no botão, chama a função onTaskClick passando o id da task (precisa ser um arrow function para não chamar a função imediatamente)
-                        className={`text-left w-full cursor-pointer bg-slate-400 text-white p-2 rounded-md ${task.isCompleted ? "line-through" : ""}`}> {/* Para usar o template string do JS, é necessário usar o `${}` dentro do {} */}
+                        className={`flex text-left w-full cursor-pointer bg-slate-400 text-white p-2 rounded-md ${task.isCompleted ? "line-through" : ""}`}> {/* Para usar o template string do JS, é necessário usar o `${}` dentro do {} */}
+                        {task.isCompleted && <CheckIcon />}
                         {task.title}
                     </button>
 

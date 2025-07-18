@@ -5,6 +5,7 @@ function Input(props) {
             type={props.type}
             placeholder={props.placeholder}
             value={props.title}
+            id={props.id}
             onChange={props.onChange} /> /*Tradução: ao mudar o valor, capture o valor do evento e use no setTitle, alterando assim o valor do titulo do state*/
     );
 

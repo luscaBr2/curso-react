@@ -12,6 +12,7 @@ function AddTasks(props) {
       {/* Como os inputs são repetitivos, podemos criar um componente Input e reutilizar ele */}
 
       <Input
+        id="title"
         type="text"
         placeholder="Título da tarefa"
         value={title}
@@ -19,6 +20,7 @@ function AddTasks(props) {
       />
 
       <Input
+        id="description"
         type="text"
         placeholder="Descrição da tarefa"
         value={description}
@@ -26,6 +28,7 @@ function AddTasks(props) {
       />
 
       <button
+        id="add-task-button"
         onClick={() => {
           // verifica se o título ou descrição estão vazios
           if (!title.trim() || !description.trim()) { // .trim() para tirar espaços em branco
@@ -33,6 +36,10 @@ function AddTasks(props) {
           }
 
           props.onAddTaskSubmt(title, description);
+
+          // limpa os inputs após adicionar a tarefa
+          document.getElementById("description").value = "";
+          document.getElementById("title").value = "";
           setTitle("");
           setDescription("");
         }}
