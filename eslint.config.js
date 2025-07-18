@@ -33,6 +33,7 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'react/prop-types': 'off', // colocado manualmente para desativar a regra de prop-types
     },
   },
 ]
